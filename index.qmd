@@ -1,9 +1,19 @@
 ---
-title: "Midterm Exam - In Class"
+title: "Midterm Exam Practice -- In Class Portion"
 author: "Your Name"
 date: "2025-10-23"
 format: html
 ---
+
+::: callout-note
+
+This exam is quite a bit longer than the exam I will give you in class, but I want you to have a feel for the types of questions I might ask.
+
+You can find the git repository for this midterm at https://github.com/stat-assignments/2025-850-practice-midterm.
+
+You should be able to clone it to your machine, but you should not be able to push your results back to the repository. 
+
+:::
 
 Note -- these directions are copied directly from the exam.
 
@@ -37,7 +47,8 @@ Note -- these directions are copied directly from the exam.
 # Least Common Multiple
 
 In this problem, you will work towards building code that will find the least common multiple of two numbers.
-You will need to
+
+The least common multiple of $a$ and $b$ is the number $c$ for which $c/a$ and $c/b$ both produce integer values.
 
 We'll start by installing a package that helps work with prime numbers... `cheapr` in R, `math` in Python.
 
@@ -120,7 +131,7 @@ You have a vector of values: $x = [23, 81, 264, 198, 261, 18, 35]$.
 
 ### R
 
-Use the `tidyr` function `expand.grid` to create a data frame with columns $x$ and $y$, each containing values of $x$. The resulting data frame should have 49 rows.
+Use the `tidyr` function `expand_grid` to create a data frame with columns $x$ and $y$, each containing values of $x$. The resulting data frame should have 49 rows.
 
 ```{r}
 
@@ -172,7 +183,7 @@ Use your skills at data transformations to convert your data frame `lcm` column 
 
 ## Skill: Subsets and Indexing 
 
-Get all rows in your data frame where $x$ and $y$ have no common factors (that is, LCM(x, y) = x*y). Store these rows in a data frame called `no_common_factors`.
+Get all rows in your (long-form) data frame where $x$ and $y$ have no common factors (that is, LCM(x, y) = x*y). Store these rows in a data frame called `no_common_factors`.
 
 ### R
 
@@ -188,13 +199,27 @@ Get all rows in your data frame where $x$ and $y$ have no common factors (that i
 
 ```
 
-## Skill: Writing Functions
+## Skill: Writing Functions & Type Conversion
 
 In the previous section, you determined the LCM of values $x$ and $y$. 
 
-In R and python, write a function, `gcd(x, y)`, which will find the greatest common denominator between $x$ and $y$.
+In R and python, write a function, `gcd(x, y)`, which will find the greatest common divisor between $x$ and $y$.
+
+Note: Your GCD should be an integer.
 
 Hint: Can you use the LCM of $x$ and $y$ to find the GCD?
+
+### Planning
+
+Using the provided scratch paper (please put your name at the top), sketch a basic program flow map that shows how the code you've already written fits together to solve this problem.
+Identify any bits of logic you need to write to solve the problem.
+
+<!-- Identify which sheet of scratch paper your answer is on (Sheet X) here -->
+
+My solution is sketched out on sheet ___
+
+<!-- ---------------------------------------------------------------------- -->
+
 
 ### R
 
@@ -211,18 +236,6 @@ Hint: Can you use the LCM of $x$ and $y$ to find the GCD?
 ## Skill: Data Frames, Loops
 
 Use your function to create a new column in your data frame, `gcd`, and populate it using a loop. 
-
-### Planning
-
-Using the provided scratch paper (please put your name at the top), sketch a basic program flow map that shows how the code you've already written fits together to solve this problem.
-Identify any bits of logic you need to write to solve the problem.
-
-<!-- Identify which sheet of scratch paper your answer is on (Sheet X) here -->
-
-My solution is sketched out on sheet ___
-
-<!-- ---------------------------------------------------------------------- -->
-
 
 ### R
 
@@ -346,7 +359,7 @@ What do you need to test to ensure those assumptions are met?
 
 ## Skill: Summarizing Data
 
-For each $x$, create a data frame with the $y$ that has the largest common denominator. 
+For each $x$, create a data frame with the $y$ that has the greatest common denominator. 
 
 ### R
 
@@ -364,7 +377,7 @@ For each $x$, create a data frame with the $y$ that has the largest common denom
 
 
 
-## Additional Questions
+## Additional Questions (out of class portion)
 
 - Be prepared to identify which functions do which things in e.g. matching or multiple choice questions
 
