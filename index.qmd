@@ -1,0 +1,371 @@
+---
+title: "Midterm Exam - In Class"
+author: "Your Name"
+date: "2025-10-23"
+format: html
+---
+
+Note -- these directions are copied directly from the exam.
+
+-   This exam is due at the end of class on October 23, 2025.
+
+-   I will grade the exam as it is pushed to github. I cannot grade the exam that exists on your computer, so please double-check your github repository to ensure that the file that is on github is the file you want me to grade.
+
+-   For each of these problems, you may choose to solve the problem in either R or python. I have provided both R and python chunks. You should feel free to remove the unused chunk for each question.
+
+-   (5 points) Please put your code under the comment corresponding to the part you are working on. This will help me to grade your work more efficiently.
+
+
+## Rules
+
+- You may use the textbook and your notes on this exam.
+
+- If you need to search for 'how do I do X in Y language', that is allowable using google/duckduckgo, but you must 1) document that you did the search, and 2) provide a link to the website you used to get a solution. AI results should be turned off by adding " -ai" to your query.
+
+- AI and LLM usage is strictly forbidden. Use of any unauthorized resources will result in a 0 on this exam.
+
+- You must be able to explain how any code you submit on this exam works.
+    - Oral exams based on your submissions will be held the week of October 28, 2025.
+    - You will be notified of the need for an oral exam by Monday, October 28.
+    - If you are notified that an oral exam is required, you must schedule a time for the exam within 24h.
+
+- If you get stuck, you may ask Dr. Vanderplas for the solution to the problem you are stuck on, at the cost of the points which would be awarded for that problem.  This is designed to get you un-stuck and allow you to complete multi-part problems.
+
+- (5 points) Your submitted qmd file must compile without errors. Use `error=TRUE` in a chunk if it is supposed to return an error or if you cannot get the code to work properly.
+
+
+# Least Common Multiple
+
+In this problem, you will work towards building code that will find the least common multiple of two numbers.
+You will need to
+
+We'll start by installing a package that helps work with prime numbers... `cheapr` in R, `math` in Python.
+
+## Skill: Install Packages
+
+### R
+
+Write code to install the `cheapr` package in R. Run the code.
+
+```{r install-cheapr-r}
+
+```
+
+This practice problem has no equivalent install command in python (`math` is installed by default), but you should know how to install a python package as well, either via a terminal/bash chunk or within a python chunk using iPython magic commands.
+
+### Thinking Criticially
+How could you ensure that the code above to install the package isn't evaluated? Think of at least two ways.
+
+
+## Skill: Loading packages
+
+Load the packages you just installed in R and Python using the chunks below.
+
+### R
+
+```{r load-cheapr-r}
+
+```
+
+### Python
+
+```{python load-math-py}
+
+```
+
+
+## Skill: Using prewritten functions
+
+### R
+
+Use the `scm2(x, y)` function to find the smallest common multiple between 35 and 49.
+
+```{r use-scm-r}
+
+```
+
+
+### Python
+
+Use the `math.lcm(a, b)` function to get the smallest common multiple between 3726 and 9321.
+Store this number in a variable called multiple.
+
+```{python use-lcm-fn-py}
+
+```
+
+
+## Skill: Matrices and Loops
+
+You have a vector of values: $x = [23, 81, 264, 198, 261, 18, 35]$.
+
+Create a 7x7 matrix where $M_{ij}$ contains the least common multiple of $x_i$ and $x_j$.
+
+### R
+
+```{r}
+
+```
+
+### Python
+
+```{python}
+
+```
+
+
+## Skill: Creating Data Frames
+
+You have a vector of values: $x = [23, 81, 264, 198, 261, 18, 35]$.
+
+### R
+
+Use the `tidyr` function `expand.grid` to create a data frame with columns $x$ and $y$, each containing values of $x$. The resulting data frame should have 49 rows.
+
+```{r}
+
+```
+
+### Python
+
+Use a list comprehension to create a DataFrame (perhaps from a list) with columns $x$ and $y$, each containing values of $x$. The resulting data frame should have 49 rows and two columns.
+
+```{python}
+
+```
+
+
+## Skill: Creating New Variables
+
+Create a new column in your data frame, `lcm`, from the previous step, containing the least common multiple between columns $x$ and $y$. 
+
+### R
+
+```{r}
+
+```
+
+
+### Python
+
+```{python}
+
+```
+
+
+## Skill: Data Transformations
+Use your skills at data transformations to convert your data frame `lcm` column into a data frame that has a similar form to your matrix -- e.g. columns named `yXXX` where XXX is the number representing `y`.  
+
+### R
+
+```{r}
+
+```
+
+
+### Python
+
+```{python}
+
+```
+
+
+## Skill: Subsets and Indexing 
+
+Get all rows in your data frame where $x$ and $y$ have no common factors (that is, LCM(x, y) = x*y). Store these rows in a data frame called `no_common_factors`.
+
+### R
+
+```{r}
+
+```
+
+
+
+### Python
+
+```{python}
+
+```
+
+## Skill: Writing Functions
+
+In the previous section, you determined the LCM of values $x$ and $y$. 
+
+In R and python, write a function, `gcd(x, y)`, which will find the greatest common denominator between $x$ and $y$.
+
+Hint: Can you use the LCM of $x$ and $y$ to find the GCD?
+
+### R
+
+```{r gcd-r}
+
+```
+
+### Python
+
+```{python gcd-py}
+
+```
+
+## Skill: Data Frames, Loops
+
+Use your function to create a new column in your data frame, `gcd`, and populate it using a loop. 
+
+### Planning
+
+Using the provided scratch paper (please put your name at the top), sketch a basic program flow map that shows how the code you've already written fits together to solve this problem.
+Identify any bits of logic you need to write to solve the problem.
+
+<!-- Identify which sheet of scratch paper your answer is on (Sheet X) here -->
+
+My solution is sketched out on sheet ___
+
+<!-- ---------------------------------------------------------------------- -->
+
+
+### R
+
+```{r gcd-col-r}
+
+```
+
+### Python
+
+```{python gcd-col-py}
+
+```
+
+## Skill: String Operations
+
+Take the data frame you created in the previous problem and
+write a `format_results(df)` function that will
+output the results of each pair of $(x, y)$ as "The LCD of (a, b) is c and the GCM is d",
+where a, b, c, d are the values x, y, LCD, and GCM. 
+
+Hint:
+
+- Python: in a DataFrame, you can convert the whole column to a string using `df.colname.astype("str")` (replace df, colname with appropriate data frame name and column name)
+
+### R
+
+```{r string-ops-r}
+
+```
+
+### Python
+
+```{python string-ops-py}
+
+```
+
+
+## Skill: Control Statements
+
+Modify the code you wrote in the previous section. If $x$ and $y$ have no common factors, instead of outputting the LCM and GCD, output "__ and __ have no common factors". 
+
+### Planning
+
+What modifications will you need to make to handle this additional requirement?
+
+<!-- Your answer goes between these lines -->
+
+
+<!-- ------------------------------------ -->
+
+<!-- If you want to sketch this out, please clearly indicate on your scratch paper that you're adding a solution (draw a horizontal line across the page and write Control Statements below the line) -- or use a new sheet of paper. Tell me in the section below where to find your sketch. -->
+
+<!-- Identify which sheet of scratch paper your answer is on (Sheet X) here -->
+<!-- Uncomment the line below if you used scratch paper -->
+<!-- My solution is sketched out on sheet ___ -->
+<!-- ---------------------------------------------------------------------- -->
+
+
+How can you use previously written code and functions to accomplish this task?
+<!-- Your answer goes between these lines -->
+
+
+<!-- ------------------------------------ -->
+
+
+What additional code do you need to write?
+
+<!-- Your answer goes between these lines -->
+
+
+<!-- ------------------------------------ -->
+
+### R
+
+```{r output-multiples-r}
+
+```
+
+
+### Python
+
+```{python output-multiples-py}
+
+```
+
+## Skill: User-proofing your function
+
+It is never safe to assume that your user knows what they are doing.
+Can you make your function from the previous part more robust by testing the user input to ensure that it conforms to your expectations?
+
+
+### Planning
+
+What assumptions does your previous answer make about parameters?
+<!-- Your answer goes between these lines -->
+
+
+<!-- ------------------------------------ -->
+
+What do you need to test to ensure those assumptions are met?
+<!-- Your answer goes between these lines -->
+
+
+<!-- ------------------------------------ -->
+
+
+
+### R
+
+```{r checks-r}
+
+```
+
+
+### Python
+
+```{python checks-py}
+
+```
+
+
+## Skill: Summarizing Data
+
+For each $x$, create a data frame with the $y$ that has the largest common denominator. 
+
+### R
+
+```{r}
+
+```
+
+
+### Python
+
+```{python}
+
+```
+
+
+
+
+## Additional Questions
+
+- Be prepared to identify which functions do which things in e.g. matching or multiple choice questions
+
+- Be prepared to summarize the arguments made in different "practical" reading articles
