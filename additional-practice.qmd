@@ -27,7 +27,7 @@ Write code to install the `primes` package in R. Run the code.
 ### Python
 
 Write code to install the `SymPy` package in Python. 
-If you choose to install the package via the terminal, place your code in the bash chunk; otherwise, place your code in the python chunk. 
+If you choose to install the package via the terminal, place your code in the unlabeled chunk; otherwise, place your code in the python chunk. 
 
 ```{bash}
 
@@ -44,7 +44,7 @@ If you choose to install the package via the terminal, place your code in the ba
 You must complete this question regardless of the language used above.
 
 
-1. Add `#| eval: false` to the first line of the code chunk (below the \`\`\`{r} or \`\`\`{python} chunk header) to stop that code from running every time the document is executed. 
+1. Add `#| eval: false` to the first line of the code chunk (below the r or python chunk header) to stop that code from running every time the document is executed. 
 
 2. List at least one additional way to keep the code in the quarto document but prevent it from running.
 
@@ -55,10 +55,6 @@ You must complete this question regardless of the language used above.
 
 
 
-
-::: {.content-visible when-format="pdf"}
-\clearpage
-:::
 
 ## Skill: Loading packages
 
@@ -82,9 +78,6 @@ Hint: SymPy should be typed as `sympy` when loading the package. You will only n
 
 ```
 
-::: {.content-visible when-format="pdf"}
-\clearpage
-:::
 
 ## Skill: Using prewritten functions
 
@@ -164,10 +157,6 @@ If `x` is an integer and the divisor is an integer, the result of modular divisi
 ```
 
 
-::: {.content-visible when-format="pdf"}
-\clearpage
-:::
-
 
 ## Skill: Writing Functions
 
@@ -225,10 +214,6 @@ A number of you handled this using a while loop -- which is a great way to do it
 
 
 ```
-
-::: {.content-visible when-format="pdf"}
-\clearpage
-:::
 
 ## Skill: Data Frames, Loops
 
@@ -312,10 +297,6 @@ Hint:
 ```
 
 
-::: {.content-visible when-format="pdf"}
-\clearpage
-:::
-
 
 ## Skill: Control Statements
 
@@ -381,6 +362,7 @@ My solution is sketched out on sheet ___
 
 ```{r}
 #| label: test-prime-factors-r
+#| error: true
 prime_factorize(34253)
 prime_factorize(prod(2:10))
 ```
@@ -396,13 +378,11 @@ prime_factorize(prod(2:10))
 
 ```{python}
 #| label: test-prime-factors-py
+#| error: true
 prime_factorize(34253) # should output "34253 is a prime number"
 prime_factorize(3628800) # should output "2^8 x 3^4 x 5^2 x 7^1"
 ```
 
-::: {.content-visible when-format="pdf"}
-\clearpage
-:::
 
 ## Skill: User-proofing your function
 
