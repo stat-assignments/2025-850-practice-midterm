@@ -437,4 +437,4 @@ prime_factorize([2, 3, 4, 5])
 ```
 
 
-A key for this exam can be found [here](https://unl-statistics.github.io/stat850/activities/additional-practice-key.qmd).
+A key for this exam can be found [here](../../activities/additional-practice-key).

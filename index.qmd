@@ -384,4 +384,4 @@ For each $x$, create a data frame with the $y$ that has the greatest common deno
 - Be prepared to summarize the arguments made in different "practical" reading articles
 
 
-A key for this exam can be found [here](https://unl-statistics.github.io/stat850/activities/midterm-practice-key.qmd).
+A key for this exam can be found [here](../../activities/midterm-practice-key.qmd).
