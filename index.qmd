@@ -378,7 +378,7 @@ For each $x$, create a data frame with the $y$ that has the greatest common deno
 
 
 ## Additional Questions (out of class portion)
-
+s
 - Be prepared to identify which functions do which things in e.g. matching or multiple choice questions
 
 - Be prepared to summarize the arguments made in different "practical" reading articles
